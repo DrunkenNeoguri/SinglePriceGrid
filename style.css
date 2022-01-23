@@ -2,106 +2,233 @@
 
 
 
-/** common **/
+/** Common **/
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 body {
-    background-color: hsl(212, 45%, 89%);
+    background-color: hsl(204, 43%, 93%);
 
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-
-    max-width: 320px;
-    margin:auto;
-
-    font-family: "Outfit", sans-serif;
-    font-size: 15px;
+    font-family:"Karla", sans-serif;
+    font-size:16px;
     font-weight: 400;
-    text-align: center;
+    color:hsl(218, 22%, 67%);
+
+    margin:auto;
+    margin-top:6rem;
 }
 
-.card {
-    background-color: hsl(0, 0%, 100%);
+.container {
+    display:grid;
+    grid-template-columns: 720px;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    
+    max-width: 720px;
+    margin:auto;
+    margin-bottom:2rem;
+    border-radius: 0.5rem;
 
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);;
+}
+
+h2 {
+    font-size:1.2rem;
+}
+
+
+
+/** container__maincard **/
+
+.container__maincard {
+    display: block;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    max-width: 720px;
+    padding:2rem;
+}
+
+.container__maincard h1 {
+    color: hsl(179, 62%, 43%);
+    margin:1rem 0 2rem 0;
+}
+
+.container__maincard h2 {
+    color: hsl(71, 73%, 54%);
+}
+
+.container__maincard p {
+    line-height: 1.7rem;
+    word-spacing: 2px;
+    padding-right: 4rem;
+}
+
+.container__maincard {
+    display: block;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    padding:2rem;
+}
+
+
+
+/** container__subcard **/
+
+.container__subcard {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-content: left;
+}
+
+.container__subcard__1, .container__subcard__2 {
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding:2rem;
+    padding-bottom: 1rem;
+}
 
-    margin:auto;
-    margin-top:8rem;
-    margin-bottom: 2rem;
-    padding:1rem;
-
-    border-radius: 1rem;
+.container__subcard h2 {
+    color:hsl(0, 0%, 100%);
+    margin-top:0;
 }
 
 
 
-/** QR Code Image**/
+/** container__subcard__1 **/
 
-.card .QRCodeImage {
-    max-width: 300px;
+.container__subcard__1 {
+    background-color:hsl(179, 62%, 43%);
+    color:hsl(0, 0%, 100%);
+
+    border-radius: 0 0 0 0.5rem;
 }
 
-.card .QRCodeImage img {
-    max-width: 300px;
-    border-radius: 1rem;
-}
-
-
-
-
-/** QR Code Description **/
-
-.card .QRCodeDescription  {
+.container__subcard__1__price {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-content: center;
     align-items: center;
-
-    margin:auto;
 }
 
-.card .QRCodeDescription h1 {
-    color: hsl(218, 44%, 22%);
-    font-size: 1.5rem;
+.container__subcard__1__price .dollarmark {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.card .QRCodeDescription p {
-    color: hsl(220, 15%, 55%);
-    font-size: 1rem;
+.container__subcard__1__price .duration {
+    color: hsla(204, 43%, 93%, 70%);
+    margin-left: 1rem;
+}
+
+.container__subcard__1 p {
+    margin-top: 0.5em;
+    margin-bottom:2rem;
+}
+
+.container__subcard__1__button {
+    display:block;
+    text-align: center;
+    text-justify: center;
+
+    background-color: hsl(71, 73%, 54%);
     margin:0;
-    padding:1rem;
-    padding-top:0;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);;
+
+    font-weight: 700;
 }
 
 
 
-/** moblie size **/
+/** container__subcard__2 **/
 
-@media(max-width:375px) {
+.container__subcard__2 {
+    background-color:#4abebd;
+    color:hsla(204, 43%, 93%, 70%);
+
+    border-radius: 0 0 0.5rem 0;
+}
+
+.container__subcard__2 p {
+    margin-top: 0.5em;
+    line-height: 1.3rem;
+}
+
+
+
+/** Mobile Size **/
+
+@media (max-width:720px) {
+
+    /** common **/
 
     body {
-        max-width: 300px;
-    }
-
-    .card {
+        max-width: 330px;
         margin-top:2rem;
-        margin-bottom: 2rem;
     }
 
-    .card .QRCodeImage, .card .QRCodeImage img{
-        max-width: 280px;
+    .container {
+        display: grid;
+        grid-template-columns: 330px;
+        grid-template-rows: 1fr;
     }
 
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    /** container__maincard **/
+
+    .container__maincard {
+        padding:1.5rem;
+    }
+
+    .container__maincard h1 {
+        font-size:1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .container__maincard h2 {
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    .container__maincard p {
+        word-spacing: 0;
+        padding-right: 0rem;
+    }
+
+
+    /** container__subcard **/
+
+    .container__subcard {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .container__subcard__1 {
+       border-radius: 0;
+       padding-bottom: 2rem;
+    }
+
+    .container__subcard__2 {
+        border-radius: 0 0 0.5rem 0.5rem;
+     }
+ 
 }
 
 
-/** attribution **/
+
+/** Attribution **/
 
 .attribution { 
     font-size: 11px;
