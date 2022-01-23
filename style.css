@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+
+
+/** common **/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    background-color: hsl(212, 45%, 89%);
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 320px;
+    margin:auto;
+
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin:auto;
+    margin-top:8rem;
+    margin-bottom: 2rem;
+    padding:1rem;
+
+    border-radius: 1rem;
+}
+
+
+
+/** QR Code Image**/
+
+.card .QRCodeImage {
+    max-width: 300px;
+}
+
+.card .QRCodeImage img {
+    max-width: 300px;
+    border-radius: 1rem;
+}
+
+
+
+
+/** QR Code Description **/
+
+.card .QRCodeDescription  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin:auto;
+}
+
+.card .QRCodeDescription h1 {
+    color: hsl(218, 44%, 22%);
+    font-size: 1.5rem;
+}
+
+.card .QRCodeDescription p {
+    color: hsl(220, 15%, 55%);
+    font-size: 1rem;
+    margin:0;
+    padding:1rem;
+    padding-top:0;
+}
+
+
+
+/** moblie size **/
+
+@media(max-width:375px) {
+
+    body {
+        max-width: 300px;
+    }
+
+    .card {
+        margin-top:2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card .QRCodeImage, .card .QRCodeImage img{
+        max-width: 280px;
+    }
+
+}
+
+
+/** attribution **/
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
